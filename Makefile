@@ -1,10 +1,18 @@
-all: cv-alexey-beshenov-en.pdf cv-alexey-beshenov-es.pdf
+all: alexey-beshenov-cv.pdf \
+	alexey-beshenov-cv-es.pdf \
+	alexey-beshenov-research-statement.pdf
 
-cv-alexey-beshenov-en.pdf: cv-alexey-beshenov.tex
-	xelatex -jobname=cv-alexey-beshenov-en '\let\english=1 \input' cv-alexey-beshenov.tex
+alexey-beshenov-cv.pdf: cv.tex
+	xelatex -jobname=alexey-beshenov-cv '\let\english=1 \input' cv.tex
 
-cv-alexey-beshenov-es.pdf: cv-alexey-beshenov.tex
-	xelatex -jobname=cv-alexey-beshenov-es '\let\spanish=1 \input' cv-alexey-beshenov.tex
+alexey-beshenov-cv-es.pdf: cv.tex
+	xelatex -jobname=alexey-beshenov-cv-es '\let\spanish=1 \input' cv.tex
+
+alexey-beshenov-research-statement.pdf: research-statement.tex
+	pdflatex -jobname=alexey-beshenov-research-statement research-statement.tex
+	bibtex alexey-beshenov-research-statement
+	pdflatex -jobname=alexey-beshenov-research-statement research-statement.tex
+	pdflatex -jobname=alexey-beshenov-research-statement research-statement.tex
 
 clean:
 	rm -f *.aux *.log *.out *.pdf

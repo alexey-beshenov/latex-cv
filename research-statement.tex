@@ -2,7 +2,10 @@
 
 \usepackage{amsmath,amssymb}
 
-\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
 
 \usepackage{fullpage}
 
@@ -31,9 +34,9 @@
 }
 
 \author{Alexey Beshenov}
-\date{January 2021}
+\date{February 2021}
 
-\title{Research project on Weil-étale cohomology of schemes}
+\title{Research project on Weil-étale cohomology}
 
 \begin{document}
 
@@ -58,7 +61,7 @@ integers of a number field $F/\QQ$, then $\zeta_X (s) = \zeta_F (s)$ is the
 Dedekind zeta function studied extensively in algebraic number theory. If $X$ is
 a smooth projective variety over a finite field $\FF_q$, then
 $\zeta_X (s) = Z_X (q^{-s})$, where
-$$Z_X (t) = \exp \Bigl(\sum_{n\ge 1} \frac{\# X (\FF_{q^n})}{n}\Bigr)$$
+$$Z_X (t) = \exp \Bigl(\sum_{n\ge 1} \frac{\# X (\FF_{q^n})}{n}\,t^n\Bigr)$$
 is the Hasse--Weil zeta function, whose basic properties are given by Weil
 conjectures in algebraic geometry (see e.g. \cite{Katz-Motives}).
 
@@ -70,7 +73,7 @@ $\zeta_X (s)$ at integers $s = n \in \ZZ$. Namely, if $d_n$ is the vanishing
 order of $\zeta_X (s)$ at $s = n$, then the corresponding special value is
 defined to be the leading Taylor coefficient at $s = n$:
 $$\zeta_X^* (n) = \lim_{s \to n} (s - n)^{d_n}\,\zeta_X (s)$$
-(assuming the analytic continuation around $s = n$).
+(assuming the meromorphic continuation around $s = n$).
 
 \section{Weil-étale cohomology}
 
@@ -132,10 +135,9 @@ of ``dualizing cycle complexes'' $\ZZ^c (n)$, as introduced by Geisser in
 \cite{Geisser-2010}, and an \textbf{arithmetic duality theorem} in terms of
 $\ZZ^c (n)$, also due to Geisser (ibid.).
 
-The precise construction of $H^i_{W,c} (X,\ZZ(n))$ is quite technical, so I
-refer to my preprint \cite{Weil-etale-preprint-1} for further details, and to
-the work of Flach and Morin \cite{Flach-Morin-2018} for the case of $X$ proper
-and regular. What is important is that
+The precise constructions are quite technical, so I refer to my preprints
+\cite{Weil-etale-preprint-1,Weil-etale-preprint-2} for further details.
+What is important is that
 \begin{itemize}
 \item the property W1) above is established assuming finite generation of
   motivic cohomology $H^i_\text{\it ét} (X, \ZZ^c (n))$;
