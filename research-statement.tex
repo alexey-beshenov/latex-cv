@@ -34,7 +34,7 @@
 }
 
 \author{Alexey Beshenov}
-\date{February 2021}
+\date{March 2021}
 
 \title{Research project on Weil-étale cohomology}
 
@@ -116,10 +116,11 @@ following conjectural properties.
 \end{enumerate}
 
 Baptiste Morin gave in \cite{Morin-2014} a construction of Weil-étale cohomology
-for $X$ a separated scheme of finite type, proper and regular, and
-$n = 0$. Later on this construction was generalized together with Matthias Flach
-in \cite{Flach-Morin-2018} to any $n \in \ZZ$, under the same assumptions on
-$X$.
+for $X$ a separated scheme of finite type, proper and regular, and $n =
+0$. Later on this construction was generalized together with Matthias Flach in
+\cite{Flach-Morin-2018} to any $n \in \ZZ$, under the same assumptions on $X$
+(for $n > 0$ the formula W4) is corrected by a rational factor $C(X,n)$ defined
+in \cite[\S 5.4]{Flach-Morin-2018}).
 
 \section{My work on Weil-étale cohomology}
 
@@ -173,7 +174,8 @@ conjecture for $X$ at $s = n-r$. I~prove that this is also the case.
 As a result, one can start from certain very special cases of $X$ for which the
 special value conjecture is known (e.g. using the equivalence with TNC and known
 cases of the latter), and then build new schemes (not necessarily proper or
-regular) for which the conjecture holds as well, unconditionally.
+regular) for which the conjecture holds as well, unconditionally. I refer to
+\cite{Weil-etale-preprint-2} for precise unconditional results.
 
 \section{My research projects}
 
@@ -185,11 +187,20 @@ Here I will list various problems that I have in mind for my future work.
 
   For instance, Jordan and Poonen write down in \cite{Jordan-Poonen-2020} a
   formula for $\zeta_X^* (1)$, where $X$ is any affine one-dimensional scheme of
-  finite type over $\Spec \ZZ$. Using my machinery, similar formulas could be
-  produced for $\zeta_X^* (n)$ and $n < 0$. (E.g. TNC is known for
-  $X = \Spec \mathcal{O}_F$, where $F/\QQ$ is an abelian number field.)
+  finite type over $\Spec \ZZ$. Using my machinery, similar formulas can be
+  produced for $\zeta_X^* (n)$, with $X$ a one-dimensional separated scheme of
+  finite type, and $n < 0$.
 
-  This is the project I am currently working on.
+  This is the project I am currently finishing (see a working draft
+  \href{https://cadadr.org/papers/1-dim-schemes.pdf}{cadadr.org/papers/1-dim-schemes.pdf} for further details).
+  Its continuation concens a similar formula for $n > 0$, which corresponds to a
+  very different situation.
+
+\item It is likely that the results of \cite{Weil-etale-preprint-1} and
+  \cite{Weil-etale-preprint-2} can be generalized to Weil-étale cohomology for
+  $\ZZ$-constructible sheaves $\mathcal{F}$, in the spirit of
+  \cite{Geisser-Suzuki-2020}. I plan to consider these generalizations in the
+  near future.
 
 \item The actual construction of Weil-étale cohomology is not formulated in
   terms of separate groups $H^i_{W,c} (X, \ZZ (n))$, but in terms of complexes
@@ -197,7 +208,6 @@ Here I will list various problems that I have in mind for my future work.
   \cite{Flach-Morin-2018} and \cite{Weil-etale-preprint-1}) up to a
   \emph{non-unique} isomorphism in the derived category $\mathbf{D} (\ZZ)$,
   as a mapping fiber of certain canonical morphism in $\mathbf{D} (\ZZ)$.
-
   This is not a big issue for the special value conjecture, since the
   determinants
   $\det_\ZZ R\Gamma_{W,c} (X, \ZZ (n)) = \det_\ZZ H^\bullet_{W,c} (X, \ZZ(n))$
