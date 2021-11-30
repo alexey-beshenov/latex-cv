@@ -12,7 +12,7 @@ alexey-beshenov-cv-es.pdf: cv.tex
 alexey-beshenov-cv-fr.pdf: cv.tex
 	xelatex -jobname=alexey-beshenov-cv-fr '\let\french=1 \input' cv.tex
 
-alexey-beshenov-research-statement.pdf: research-statement.tex
+alexey-beshenov-research-statement.pdf: research-statement.tex zeta.bib amsalpha-cust.bst
 	pdflatex -jobname=alexey-beshenov-research-statement research-statement.tex
 	bibtex alexey-beshenov-research-statement
 	pdflatex -jobname=alexey-beshenov-research-statement research-statement.tex

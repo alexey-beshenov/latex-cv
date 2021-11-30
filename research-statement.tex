@@ -34,7 +34,7 @@
 }
 
 \author{Alexey Beshenov}
-\date{March 2021}
+\date{November 2021}
 
 \title{Research project on Weil-étale cohomology}
 
@@ -53,51 +53,52 @@ $$\zeta_X (s) = \prod_{x \in |X|} \frac{1}{1 - N (x)^{-s}}.$$
 Here $|X|$ denotes the set of closed points of $X$, and for $x \in |X|$ the norm
 $N (x)$ is the order of the corresponding residue field
 $\kappa (x) = \mathcal{O}_{X,x}/\mathfrak{m}_{X,x}$. The above product converges
-for $\Re s > \dim X$, and conjecturally, the zeta function admits a meromorphic
-continuation to the whole complex plane.
+for $\Re s > \dim X$, and it is conjectured that the zeta function admits a
+meromorphic continuation to the whole complex plane.
 
 In particular, if $X = \Spec \mathcal{O}_F$ is the spectrum of the ring of
 integers of a number field $F/\QQ$, then $\zeta_X (s) = \zeta_F (s)$ is the
-Dedekind zeta function studied extensively in algebraic number theory. If $X$ is
-a smooth projective variety over a finite field $\FF_q$, then
+Dedekind zeta function, which has been extensively studied in algebraic number
+theory. If $X$ is a smooth projective variety over a finite field $\FF_q$, then
 $\zeta_X (s) = Z_X (q^{-s})$, where
 $$Z_X (t) = \exp \Bigl(\sum_{n\ge 1} \frac{\# X (\FF_{q^n})}{n}\,t^n\Bigr)$$
 is the Hasse--Weil zeta function, whose basic properties are given by Weil
 conjectures in algebraic geometry (see e.g. \cite{Katz-Motives}).
 
-For basic facts and conjectures about zeta functions of schemes, I refer to
+For basic facts and conjectures about zeta functions of schemes I refer to
 Serre's survey \cite{Serre-65}.
 
 Of particular interest are the so-called \textbf{special values} of
 $\zeta_X (s)$ at integers $s = n \in \ZZ$. Namely, if $d_n$ is the vanishing
 order of $\zeta_X (s)$ at $s = n$, then the corresponding special value is
-defined to be the leading Taylor coefficient at $s = n$:
+defined as the leading Taylor coefficient at $s = n$:
 $$\zeta_X^* (n) = \lim_{s \to n} (s - n)^{d_n}\,\zeta_X (s)$$
 (assuming the meromorphic continuation around $s = n$).
 
 \section{Weil-étale cohomology}
 
-Both vanishing order $d_n$ and special value $\zeta_X^* (n)$ are expected to
-have expressions in terms of \emph{certain invariants} attached to $X$. There
-are various conjectures, of varying generality, that make this precise.  I am
+It is expected that both the vanishing order $d_n$ and the special value
+$\zeta_X^* (n)$ can be expressed by \emph{certain invariants} of $X$. There are
+many conjectures of varying generality that make this precise. I am
 interested in a relatively recent \textbf{Weil-étale cohomology} program,
 initiated by Stephen Lichtenbaum
-\cite{Lichtenbaum-05,Lichtenbaum-09-Euler,Lichtenbaum-09-number-rings}.  Other
-results for the case of varieties over finite fields have been obtained by
+\cite{Lichtenbaum-05,Lichtenbaum-09-Euler,Lichtenbaum-09-number-rings}. Other
+results for the case of varieties over finite fields were obtained by
 Geisser \cite{Geisser-2004,Geisser-2006}.
 
 Let me briefly explain what one expects from Weil-étale cohomology. Let $X$ be a
 separated scheme of finite type over $\Spec \ZZ$. Then for a fixed integer $n$,
-Weil-étale cohomology consists of abelian groups $H^i_{W,c} (X,\ZZ(n))$ with the
-following conjectural properties.
+the Weil-étale cohomology consists of abelian groups $H^i_{W,c} (X,\ZZ(n))$ with
+the following conjectural properties.
 
 \begin{enumerate}
 \item[W1)] $H^i_{W,c} (X,\ZZ(n))$ are finitely generated abelian groups, trivial
   for $|i| \gg 0$.
-
-  As a consequence, to these groups one can associate the corresponding
+ 
+  Consequently, one can assign to these groups the corresponding
   \textbf{determinant} $\det_\ZZ H^\bullet_{W,c} (X, \ZZ(n))$ in the sense of
-  \cite{Knudsen-Mumford-1976}, which is a free $\ZZ$-module of rank $1$.
+  Knudsen and Mumford \cite{Knudsen-Mumford-1976}, which is a free $\ZZ$-module
+  of rank $1$.
 
 \item[W2)] After tensoring these cohomology groups with $\RR$, one obtains a long
   exact sequence of finite-dimensional real vector spaces
@@ -117,136 +118,160 @@ following conjectural properties.
 
 Baptiste Morin gave in \cite{Morin-2014} a construction of Weil-étale cohomology
 for $X$ a separated scheme of finite type, proper and regular, and $n =
-0$. Later on this construction was generalized together with Matthias Flach in
+0$. Later this construction was generalized together with Matthias Flach in
 \cite{Flach-Morin-2018} to any $n \in \ZZ$, under the same assumptions on $X$
-(for $n > 0$ the formula W4) is corrected by a rational factor $C(X,n)$ defined
-in \cite[\S 5.4]{Flach-Morin-2018}).
+(for $n > 0$ the formula W4) is corrected by a rational factor $C(X,n)$, defined
+in [ibid. \S 5.4]).
 
 \section{My work on Weil-étale cohomology}
 
-In my PhD thesis \cite{These}, co-supervised by Baptiste Morin and Bas
-Edixhoven, I generalized the work of Flach and Morin to any $X$ that is
+In my doctoral thesis \cite{These}, which was co-supervised by Baptiste Morin
+and Bas Edixhoven, I generalized the work of Flach and Morin to any $X$ that is
 separated and of finite type over $\Spec \ZZ$ (thus removing the assumption that
-$X$ is proper or regular), while considering the case of $n < 0$
-(which turns out to simplify certain aspects of the theory).
+$X$ is proper or regular) for the case of $n < 0$ (which, as it turns out,
+simplifies certain aspects of the theory).
 
 The main building block of $H^i_{W,c} (X,\ZZ(n))$ is the (étale)
 \textbf{motivic cohomology} $H^i_\text{\it ét} (X, \ZZ^c (n))$, defined in terms
-of ``dualizing cycle complexes'' $\ZZ^c (n)$, as introduced by Geisser in
-\cite{Geisser-2010}, and an \textbf{arithmetic duality theorem} in terms of
-$\ZZ^c (n)$, also due to Geisser (ibid.).
+of ``dualizing cycle complexes'' $\ZZ^c (n)$, as considered by Geisser in
+\cite{Geisser-2010} in the context of \textbf{arithmetic duality theorems}.
 
-The precise constructions are quite technical, so I refer to my preprints
-\cite{Weil-etale-preprint-1,Weil-etale-preprint-2} for further details.
-What is important is that
+The exact constructions are quite technical, so I refer the reader to my
+preprints \cite{Weil-etale-cohomology,Weil-etale-zeta-values} for more
+details. It is important to note that
 \begin{itemize}
-\item the property W1) above is established assuming finite generation of
-  motivic cohomology $H^i_\text{\it ét} (X, \ZZ^c (n))$;
+\item the above property W1) is established assuming the finite generation of
+  étale motivic cohomology $H^i_\text{\it ét} (X, \ZZ^c (n))$;
 
-\item the sequence of real vector spaces in W2) is defined in terms of the
-  \textbf{regulator} map; the exactness in W2) follows from the standard
-  conjecture about the regulator.
+\item the sequence of real vector spaces in W2) is defined via a
+  \textbf{regulator} map; the exactness in W2) follows from Beilinson
+  conjectures about regulators.
 \end{itemize}
 
 % \section{Why Weil-étale cohomology?}
 
-As most of the formulas for special values, all this is hugely conjectural,
+Like most of the formulas for special values, this is all conjectural,
 especially at the level of generality we are interested in. A compelling
 evidence in favor of the above special value conjecture is that, whenever the
 comparison makes sense, it is equivalent to the \textbf{Tamagawa number
   conjecture} (\textbf{TNC}) of Bloch--Kato--Fontaine--Perrin-Riou
 \cite{Fontaine-Perrin-Riou}.
 
-One new interesting point is the following. If $Z \subset X$ is a closed
-subscheme and $U = X\setminus Z$ is its open complement, then
+A new interesting point is the following. If $Z \subset X$ is a closed subscheme
+and $U = X\setminus Z$ is its open complement, then
 $\zeta_X (s) = \zeta_Z (s) \, \zeta_U (s)$. Accordingly, one should expect the
-special value conjecture to be compatible with such ``open-closed
+special value conjecture to be compatible with such ``closed-open
 decompositions'' of schemes: the special value conjecture for $X$ should be
-equivalent to the corresponding conjecture for $Z$ and $U$. I prove in my
-thesis that this is indeed the case in my situation: morally, this comes from a
-long exact sequence
+equivalent to the corresponding conjecture for $Z$ and $U$. I prove in
+\cite{Weil-etale-zeta-values} that this is indeed the case in my situation:
+morally, this follows from a long exact sequence
 \[ \cdots \to H^i_{W,c} (U,\ZZ(n)) \to H^i_{W,c} (X,\ZZ(n)) \to H^i_{W,c} (Z,\ZZ(n)) \to H^{i+1}_{W,c} (U,\ZZ(n)) \to \cdots \]
-Similarly, it is not difficult to see that one has
-$\zeta_{\AA^r_X} (s) = \zeta_X (s-r)$, and thus a special value conjecture for
+Similarly, it is not hard to see that one has
+$\zeta_{\AA^r_X} (s) = \zeta_X (s-r)$, and hence a special value conjecture for
 the affine bundle $\AA^r_X$ at $s = n$ should be equivalent to the corresponding
-conjecture for $X$ at $s = n-r$. I~prove that this is also the case.
+conjecture for $X$ at $s = n-r$. I~prove in \cite{Weil-etale-zeta-values} that
+this is also the case.
 
-As a result, one can start from certain very special cases of $X$ for which the
-special value conjecture is known (e.g. using the equivalence with TNC and known
-cases of the latter), and then build new schemes (not necessarily proper or
-regular) for which the conjecture holds as well, unconditionally. I refer to
-\cite{Weil-etale-preprint-2} for precise unconditional results.
+As a result, we can start from certain very special cases of $X$ for which the
+special value conjecture is known (e.g. using equivalence with TNC and known
+cases of TNC), and then construct new schemes (not necessarily proper or
+regular) for which the conjecture also holds, unconditionally. I refer the
+reader to \cite{Weil-etale-zeta-values} for precise unconditional results.
 
-\section{My research projects}
+In a recent preprint \cite{Weil-etale-1-dim}, I was able to compute the
+Weil-étale cohomology of an arbitrary one-dimensional separated scheme of finite
+type $X \to \Spec \ZZ$ and $n < 0$, and as a consequence, obtain a new formula
+for the special values $\zeta_X^* (n)$ for $n < 0$ in terms the étale motivic
+cohomology of $X$ and a regulator. This was motivated in part by the work of
+Jordan and Poonen, who worked out a formula for $\zeta_X^* (1)$ for $X$
+one-dimensional, reduced and affine in \cite{Jordan-Poonen-2020}.  My formula
+from \cite{Weil-etale-1-dim} holds unconditionally if for all generic points
+$\eta \in X$ with $\operatorname{char} \kappa (\eta) = 0$ the corresponding
+extension $\kappa (\eta) / \QQ$ is abelian.
 
-Here I will list various problems that I have in mind for my future work.
+\section{My research plans}
+
+Here I will list several problems that I have in mind for my future work.
 
 \begin{enumerate}
-\item It is interesting to write down specific formulas for particular cases of
-  $X$ that follow from the Weil-étale formalism.
+\item It is an interesting project to extend the results of
+  \cite{Weil-etale-1-dim} to all integers $n \in \ZZ$.
 
-  For instance, Jordan and Poonen write down in \cite{Jordan-Poonen-2020} a
-  formula for $\zeta_X^* (1)$, where $X$ is any affine one-dimensional scheme of
-  finite type over $\Spec \ZZ$. Using my machinery, similar formulas can be
-  produced for $\zeta_X^* (n)$, with $X$ a one-dimensional separated scheme of
-  finite type, and $n < 0$.
+  In the work of Flach and Morin \cite{Flach-Morin-2018} the corresponding
+  special value conjecture for $n > 0$ involves a ``correction factor''
+  $C (X,n) \in \QQ$. Subsequent work
+  \cite{Flach-Morin-2020,Flach-Morin-2020-Muenster} sheds some light on its
+  nature. The key to generalizing Flach and Morin's work for non-regular or
+  non-proper $X$ seems to lie in understanding the required correction
+  factor. The recent work of Morin \cite{Morin-2021-THH} may be particularly
+  helpful here.
 
-  This is the project I am currently finishing (see a working draft
-  \href{https://cadadr.org/papers/1-dim-schemes.pdf}{cadadr.org/papers/1-dim-schemes.pdf} for further details).
-  Its continuation concens a similar formula for $n > 0$, which corresponds to a
-  very different situation.
+\item Lichtenbaum in his recent preprint \cite{Lichtenbaum-2021} gives a
+  different special value conjecture, which up to a power of $2$ shold be
+  equivalent to that of Flach and Morin \cite{Flach-Morin-2018}. It would be
+  useful to explicitly compare the two conjectures.
 
-\item It is likely that the results of \cite{Weil-etale-preprint-1} and
-  \cite{Weil-etale-preprint-2} can be generalized to Weil-étale cohomology for
-  $\ZZ$-constructible sheaves $\mathcal{F}$, in the spirit of
-  \cite{Geisser-Suzuki-2020}. I plan to consider these generalizations in the
-  near future.
+\item It is likely that my results can be generalized to Weil-étale cohomology
+  for $\ZZ$-constructible sheaves $\mathcal{F}$, in the spirit of
+  \cite{Geisser-Suzuki-2020} and \cite{Adrien-Morin-2021}. I plan to consider
+  these generalizations in the near future.
+
+\item The construction of the Weil-étale cohomolgy by Flach and Morin
+  \cite{Flach-Morin-2018} uses the so-called \textbf{Artin--Verdier topology},
+  a modification of the étale topology $X_\text{\'et}$, which is supposed to take
+  care of the real places $X (\RR)$. A suitable construction is given in
+  [ibid., \S 6], but \emph{only for proper and regular $X$}. The methods I use
+  in \cite{Weil-etale-cohomology} circumvent this restriction, but at the cost
+  of introducing an auxiliary cohomology theory $H^i_{fg} (X, \ZZ(n))$ which is
+  not bounded, but can instead have finite $2$-torsion in arbitrarily high
+  degrees $i \gg 0$.
+
+  It would be interesting to work out the right construction of Artin--Verdier
+  topology for any $X \to \Spec \ZZ$ separated and of finite type, and rework
+  \cite{Weil-etale-cohomology} accordingly.
 
 \item The actual construction of Weil-étale cohomology is not formulated in
   terms of separate groups $H^i_{W,c} (X, \ZZ (n))$, but in terms of complexes
   $R\Gamma_{W,c} (X, \ZZ (n))$. At present, these are defined (both in
-  \cite{Flach-Morin-2018} and \cite{Weil-etale-preprint-1}) up to a
-  \emph{non-unique} isomorphism in the derived category $\mathbf{D} (\ZZ)$,
-  as a mapping fiber of certain canonical morphism in $\mathbf{D} (\ZZ)$.
-  This is not a big issue for the special value conjecture, since the
-  determinants
+  \cite{Flach-Morin-2018} and in \cite{Weil-etale-cohomology}) up to a
+  \emph{non-unique} isomorphism in the derived category $\mathbf{D} (\ZZ)$, as a
+  mapping fiber of certain canonical morphism in $\mathbf{D} (\ZZ)$. This is not
+  much of a problem for the special value conjecture, since the determinants
   $\det_\ZZ R\Gamma_{W,c} (X, \ZZ (n)) = \det_\ZZ H^\bullet_{W,c} (X, \ZZ(n))$
-  are uniquely defined, but nevertheless, it would be useful to find a more
-  canonical definition for $R\Gamma_{W,c} (X, \ZZ (n))$.
+  are uniquely defined, but it would be useful to find a more canonical
+  definition for $R\Gamma_{W,c} (X, \ZZ (n))$.
 
-  This could be probably remedied using dg-categories \cite{Toen-2011} or
-  Lurie's stable $\infty$-categories \cite{Lurie-stable-oo}.
+  This could probably be remedied using dg-categories \cite{Toen-2011} or
+  stable $\infty$-categories \cite{Lurie-stable-oo}.
 
-\item In the above exposition, I swept under the rug some details about
-  regulators. I use the construction of Kerr, Lewis, and Müller-Stach from
+\item In the above exposition, I have swept some details about regulators under
+  the rug. I use the construction of Kerr, Lewis, and Müller-Stach from
   \cite{KLMS}. In general, the regulator has to do with complex points
-  $X (\CC)$, and the regulator in \cite{KLMS} is defined for $X_\CC$ being
-  smooth and quasi-projective. This is quite unfortunate, since my construction
+  $X (\CC)$, and the regulator in \cite{KLMS} is defined for smooth and
+  quasi-projective $X_\CC$. This is rather unfortunate, because my construction
   of Weil-étale cohomology $H^i_{W,c} (X, \ZZ (n))$ works for any $X$ that is
   separated and of finite type over $\Spec \ZZ$ (assuming finite generation of
   the corresponding motivic cohomology). It would be interesting to find
-  appropriate generalizations of the regulator for singular $X_\CC$, and connect
-  these to my machinery.
+  suitable generalizations of the regulator for singular $X_\CC$, and connect
+  them to my machinery.
 
   There are variants of motivic cohomology for singular complex varieties,
-  defined in terms of hyperresolutions, e.g. Hanamura's
-  ``Chow cohomology groups'' \cite{Hanamura-2000}, that allow to formally extend
-  the formula of Kerr--Lewis--Müller-Stach to the singular case. However,
-  it seems like the singular regulators haven't been considered thoroughly for
-  special value conjectures.
+  defined in terms of hyperresolutions, e.g. Hanamura's ``Chow cohomology
+  groups'' \cite{Hanamura-2000}, which allow us to formally extend the formula
+  of Kerr--Lewis--Müller-Stach to the singular case. However, it seems that
+  singular regulators have not been thoroughly considered for special value
+  conjectures.
 
 \item The Tamagawa number conjecture has a generalization, known as the
   \textbf{equivariant Tamagawa number conjecture} (\textbf{ETNC});
   see e.g. Flach's survey \cite{Flach-ETNC}. Similarly, Weil-étale cohomology
   should also have an ``equivariant refinement'', and it would be interesting to
-  write it down for my construction, and prove its compatibility with ETNC.
+  write this down for my construction and prove the compatibility with ETNC.
 \end{enumerate}
 
-These are a few specific questions that naturally arise from my previous
-work. In general, Weil-étale cohomology is an active research topic, and there
-are still many open problems related to it.
-
-\pagebreak
+These are a few specific questions that arise naturally from my previous
+work. In general, Weil-étale cohomology is an active research topic and there
+are still many open problems in this context.
 
 \bibliographystyle{amsalpha-cust}
 \bibliography{zeta}
